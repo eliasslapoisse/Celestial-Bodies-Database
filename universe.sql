@@ -51,7 +51,7 @@ CREATE TABLE public.galaxy (
     galaxy_id integer NOT NULL,
     name character varying(30) NOT NULL,
     age_in_millions_of_years numeric(10,3),
-    distance_from_earth_ly bigint,
+    distance_from_earth_ly integer,
     galaxy_types_id integer NOT NULL
 );
 
@@ -165,7 +165,7 @@ CREATE TABLE public.planet (
     distance_from_earth_ly numeric(18,6),
     has_life boolean,
     is_spherical boolean,
-    radius_in_km bigint,
+    radius_in_km integer,
     galaxy_id integer NOT NULL,
     star_id integer,
     planet_types_id integer NOT NULL
