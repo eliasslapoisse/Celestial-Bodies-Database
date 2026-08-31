@@ -21,12 +21,14 @@ The database consists of **6 tables**:
 
 ### Relationships
 
-galaxy_types ─┐
-├─▶ galaxy ─┐
-├─▶ star ─┐
-├─▶ planet ─┐
-planet_types ─┘ ├─▶ moon
-
+```mermaid
+graph LR
+    GT[galaxy_types] --> G[galaxy]
+    G --> S[star]
+    S --> P[planet]
+    PT[planet_types] --> P
+    P --> M[moon]
+```
 
 - Each **star** references a **galaxy**
 - Each **planet** references a **star**, a **galaxy**, and a **planet type**
